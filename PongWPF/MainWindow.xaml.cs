@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,10 +36,16 @@ namespace PongGame
 
         private double _angle = 155;
         private double _speed = 5;
-        private int _padSpeed = 5;
+        private int _padSpeed = 9;
 
         void _timer_Tick(object sender, EventArgs e)
         {
+            if ((Keyboard.IsKeyDown(Key.W)) && (_leftPad.YPosition > 0)) _leftPad.YPosition -= _padSpeed;
+            if ((Keyboard.IsKeyDown(Key.S)) && (_leftPad.YPosition < MainCanvas.ActualHeight - LeftPad.ActualHeight)) _leftPad.YPosition += _padSpeed;
+            if ((Keyboard.IsKeyDown(Key.Up)) && (_rightPad.YPosition > 0)) _rightPad.YPosition -= _padSpeed;
+            if ((Keyboard.IsKeyDown(Key.Down)) && (_rightPad.YPosition < MainCanvas.ActualHeight - RightPad.ActualHeight)) _rightPad.YPosition += _padSpeed;
+
+
             if (_ball.Y <= 0) _angle = _angle + (180 - 2 * _angle);
             if (_ball.Y >= MainCanvas.ActualHeight - 20) _angle = _angle + (180 - 2 * _angle);
 
@@ -69,18 +75,19 @@ namespace PongGame
         {
             _ball.Y = 210;
             _ball.X = 380;
+            _speed = 5;
         }
 
         private void ChangeAngle()
         {
-            if (_ball.MovingRight == true) _angle = 270 - ((_ball.Y + 10) - (_rightPad.YPosition + 40));
-            else if (_ball.MovingRight == false) _angle = 90 + ((_ball.Y + 10) - (_leftPad.YPosition + 40));
+            if (_ball.MovingRight == true) _angle = 270 - ((_ball.Y + 10) - (_rightPad.YPosition + RightPad.ActualHeight/2));
+            else if (_ball.MovingRight == false) _angle = 90 + ((_ball.Y + 10) - (_leftPad.YPosition + LeftPad.ActualHeight/2));
         }
 
         private void ChangeDirection()
         {
-            if (_ball.MovingRight == true) _ball.MovingRight = false;
-            else if (_ball.MovingRight == false) _ball.MovingRight = true;
+            _ball.MovingRight = !_ball.MovingRight;
+            _speed *= 1.05; //beállítási lehetőség - Nőjjön -e a sebesség?
         }
 
         private bool CheckCollision()
@@ -99,16 +106,15 @@ namespace PongGame
         readonly Ball _ball = new Ball { X = 380, Y = 210, MovingRight = true };
 
         readonly Pad _leftPad = new Pad { YPosition = 90 };
-        readonly Pad _rightPad = new Pad { YPosition = 70 };
+        readonly Pad _rightPad = new Pad { YPosition = 90 };
 
 
         private void MainWindow_OnKeyDown(object sender, KeyboardEventArgs e)
         {
-            if ((Keyboard.IsKeyDown(Key.W))&& (_leftPad.YPosition>0)) _leftPad.YPosition -= _padSpeed;
-            if ((Keyboard.IsKeyDown(Key.S))&& (_leftPad.YPosition < MainCanvas.ActualHeight-LeftPad.ActualHeight)) _leftPad.YPosition += _padSpeed;
-            if ((Keyboard.IsKeyDown(Key.Up))&& (_rightPad.YPosition > 0)) _rightPad.YPosition -= _padSpeed;
-            if ((Keyboard.IsKeyDown(Key.Down))&& (_rightPad.YPosition < MainCanvas.ActualHeight-RightPad.ActualHeight)) _rightPad.YPosition += _padSpeed;
-
+            //törölve
         }
+
+
+
     }
 }
