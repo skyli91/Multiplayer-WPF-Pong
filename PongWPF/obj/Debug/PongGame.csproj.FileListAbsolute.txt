@@ -1,0 +1,16 @@
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongGame.csprojResolveAssemblyReference.cache
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\MainWindow.baml
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\MainWindow.g.cs
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\App.g.cs
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongWPF_MarkupCompile.cache
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongWPF.g.resources
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongWPF.Properties.Resources.resources
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongGame.csproj.GenerateResource.Cache
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\bin\Debug\PongWPF.exe.config
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\bin\Debug\PongWPF.exe
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\bin\Debug\PongWPF.pdb
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongWPF.exe
+c:\users\tormi\documents\visual studio 2015\Projects\PongWPF\PongWPF\obj\Debug\PongWPF.pdb
+C:\Users\Tormi\Documents\GitHub\Cronos-Pong\PongWPF\bin\Debug\PongWPF.exe.config
+C:\Users\Tormi\Documents\GitHub\Cronos-Pong\PongWPF\obj\Debug\PongWPF.exe
+C:\Users\Tormi\Documents\GitHub\Cronos-Pong\PongWPF\obj\Debug\PongWPF.pdb
